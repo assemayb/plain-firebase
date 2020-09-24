@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FireStuff</title>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-firestore.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-analytics.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyBwHzuvisgLUJo5BVwxSuB9JOGyKtKUXNM",
+            authDomain: "first-project-4d551.firebaseapp.com",
+            databaseURL: "https://first-project-4d551.firebaseio.com",
+            projectId: "first-project-4d551",
+            storageBucket: "first-project-4d551.appspot.com",
+            messagingSenderId: "917982582991",
+            appId: "1:917982582991:web:087f756043291f0b687fba",
+            measurementId: "G-NPN7G5295E"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    </script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Faker/3.1.0/faker.min.js"
+        integrity="sha512-/seDHxVfh1NvFUscAj8GsHQVZJvr2jjAoYsNL7As2FCaFHUHYIarl3sRCvVlFgyouVNiRgHIebyLKjpgd1SLDw=="
+        crossorigin="anonymous"></script>
+
+    <script src="app.js" defer></script>
+</head>
+
+<style>
+    body {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        padding: 2rem;
+        margin: 3rem;
+    }
+    #whenSignedOut {
+        display: inline;
+    }
+</style>
+
+<body>
+    <h1>this is awesome</h1>
+
+    <section id="whenSignedOut">
+        <button id="signInBtn" class="btn btn-danger">
+            Sign With Google
+        </button>
+    </section>
+
+    <section id="whenSignedIn" hidden="true">
+        <div id="userDetails">
+
+        </div>
+        <button id="signOutBtn" class="btn btn-primary">Sign Out</button>
+    </section>
+    <hr>
+
+    <section>
+        <h3 id="message"></h3>
+        <h2>Firestore things</h2>
+        <ul id="things-list">
+
+        </ul>
+        <button id="createThing" class="btn btn-success">
+            create a random item
+        </button>
+    </section>
+
+</body>
+
+</html>
